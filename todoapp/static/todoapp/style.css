@@ -1,0 +1,56 @@
+html {
+background-color:#d50000;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.8),
+      rgba(0,0,0,0.8) 100px,
+      transparent 0px,
+      transparent 200px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5) 100px,
+      transparent 0px,
+      transparent 200px
+    );
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+}
+
+.div-container {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.card-tarefa {
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.adicionar {
+    padding: 10px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.adicionar:hover {
+background-color: black;
+color: white;
+}

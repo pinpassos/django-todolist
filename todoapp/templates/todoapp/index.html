@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'todoapp/style.css' %}">
+    <title>To-Do-List</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">To Do List</h1>
+
+    {% if tarefa_adicionada %}
+    <div class="div-container">
+        {% for tarefa in tarefa_adicionada %}
+        <div class="card-tarefa">
+            <strong>Tarefa:</strong> {{ tarefa.tarefa_texto }}<br>
+            <strong>Descrição da tarefa:</strong> {{ tarefa.descricao_texto }}<br>
+            {% if tarefa.importancia == True %}
+                <strong>Importância:</strong> Importante<br>
+            {% else %}
+                <strong>Importância:</strong> Não importante<br>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% else %}
+            <p>Não há tarefas adicionadas.</p>
+        {% endif %}
+
+       <br><br><br> <a class="adicionar" href="{% url 'adicionar' %}">Adicionar tarefa</a>
+    </div>
+
+
+</body>
+</html>
